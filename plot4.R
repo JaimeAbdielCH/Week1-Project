@@ -1,4 +1,5 @@
 #create plot4
+source("myCode_Homework1.R")
 png(filename = "plot4.png", width = 480, height = 480)
 
 #Table

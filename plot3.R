@@ -1,4 +1,5 @@
 #create plot3
+source("myCode_Homework1.R")
 png(filename = "plot3.png", width = 480, height = 480)
 
 plot(df$datetime, df$sub1, type="l", xlab="", ylab="Energy Sub Metering")
