@@ -1,4 +1,6 @@
 #create plot4
+png(filename = "plot4.png", width = 480, height = 480)
+
 #Table
 par(mfrow = c(2,2))
 #Plot1
@@ -15,5 +17,4 @@ legend("topright", lwd=2, col=c("black", "red", "blue"), legend = c("Sub_Meterin
 #Plot4
 plot(df$datetime, df$real, xlab="Datetime", ylab="Global_reacttive_power", type="l", ylim=range(0,0.5))
 
-dev.copy(png, file="plot4.png")
 dev.off()

@@ -1,4 +1,12 @@
 #Begin
+
+# Download dataset if doenst exist
+if (!file.exists("./household_power_consumption.txt")) {
+  dataset <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+  download.file(dataset, "./exdata_data_household_power_consumption.zip", method="curl")
+  unzip("./exdata_data_household_power_consumption.zip", exdir = ".")
+}
+
 myData <- read.table("household_power_consumption.txt", header = TRUE,
 sep=";"
 ,na.string="?")
